@@ -143,8 +143,6 @@ def player_stats(athlete)
   elsif away_players.include?(athlete)
     position = away_players.find_index(athlete)
     statistics = agash[position]
-  else
-    "SLAM"
   end
   statistics.reject! { |k| k == :name }
   statistics.keys.length.times { |index| statistics[statistics.keys[index]] = statistics[statistics.keys[index]].to_i }
